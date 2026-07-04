@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Srinivasa Tiles | Get a Quote</title>
+<meta name="description" content="Get in touch with Srinivasa Tiles for pricing, availability and project support. Call, WhatsApp, or send an enquiry — we typically respond within one business day.">
+<link rel="icon" href="assets/images/logo/logo-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal in">Get in Touch</div>
+    <h1 class="reveal in">Let's talk <em>tiles.</em></h1>
+    <p class="lede reveal in">Tell us about your project — residential roof, commercial facade or interior — and our team will respond with options and pricing.</p>
+  </div>
+</section>
+
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+    <div class="grid-2" style="align-items:flex-start;">
+
+      <div class="reveal">
+        <h3 style="font-size:24px; margin-bottom:22px;">Reach us directly</h3>
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <span class="icon-badge" id="ciPhone"></span>
+            <div class="txt">
+              <span>Phone</span>
+              <a href="tel:+918951296369" id="phoneLink1">+91 8951296369</a><br>
+              <a href="tel:+917708156600" id="phoneLink2">+91 7708156600</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon-badge" id="ciMail"></span>
+            <div class="txt">
+              <span>Email</span>
+              <a href="mailto:sales@sthindia.com" id="emailLink">sales@sthindia.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon-badge" id="ciPin"></span>
+            <div class="txt">
+              <span>Address</span>
+              <p id="addressText">Bennikal Road, Sanamavu Village, Rayakottai Road, Hosur - 635119, Krishnagiri Dist, Tamil Nadu</p>
+              <a href="https://maps.app.goo.gl/GCZ3m3GYtuJSuc8F8" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="margin-top:12px;" id="mapsLinkBtn">
+                <span id="ciMapIcon" style="display:inline-flex; width:16px; height:16px;"></span> View on Google Maps
+              </a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <span class="icon-badge" id="ciWhatsapp"></span>
+            <div class="txt">
+              <span>WhatsApp</span>
+              <a href="#" id="waContactLink" target="_blank" rel="noopener">Chat with us instantly</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-frame reveal">
+          <iframe src="https://www.google.com/maps?q=Bennikal%20Road%2C%20Sanamavu%20Village%2C%20Hosur%20635119&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Srinivasa Tiles factory location"></iframe>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="form-card">
+          <h3 style="font-size:22px;">Send an enquiry</h3>
+          <p style="margin-top:8px; color:var(--stone); font-size:14px;">We typically respond within one business day.</p>
+
+          <form id="enquiryForm" style="margin-top:26px;">
+            <div class="form-row">
+              <label for="fname">Your Name</label>
+              <input type="text" id="fname" name="name" required>
+            </div>
+            <div class="form-row form-row-split">
+              <div>
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email">
+              </div>
+              <div>
+                <label for="fphone">Phone</label>
+                <input type="tel" id="fphone" name="phone" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <label for="fmessage">Project Details</label>
+              <textarea id="fmessage" name="message" placeholder="Tell us about the tiles you're looking for, quantities, and timeline."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">Send Enquiry</button>
+            <p class="form-note">Or email us directly at <a href="mailto:sales@sthindia.com" style="color:var(--clay-deep); font-weight:700;">sales@sthindia.com</a></p>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <span class="icon-badge lg clay" id="successIcon"></span>
+            <h3>Enquiry sent!</h3>
+            <p>Thanks for reaching out — our team will get back to you within one business day.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script src="js/icons.js"></script>
+<script src="js/main.js"></script>
+<script src="js/form.js"></script>
+<script>
+  window.onSiteReady = function() {
+    document.getElementById("ciPhone").innerHTML = ICONS.phone;
+    document.getElementById("ciMail").innerHTML = ICONS.mail;
+    document.getElementById("ciPin").innerHTML = ICONS.pin;
+    document.getElementById("ciWhatsapp").innerHTML = ICONS.whatsapp;
+    document.getElementById("ciMapIcon").innerHTML = ICONS.pin;
+    document.getElementById("successIcon").innerHTML = ICONS.quality;
+    document.getElementById("waContactLink").href = whatsappLink("Hello Srinivasa Tiles, I'd like to enquire about your terracotta products.");
+
+    document.getElementById("phoneLink1").textContent = SITE.phone1;
+    document.getElementById("phoneLink1").href = "tel:" + SITE.phone1_tel;
+    document.getElementById("phoneLink2").textContent = SITE.phone2;
+    document.getElementById("phoneLink2").href = "tel:" + SITE.phone2_tel;
+    document.getElementById("emailLink").textContent = SITE.email;
+    document.getElementById("emailLink").href = "mailto:" + SITE.email;
+    document.getElementById("addressText").textContent = SITE.address;
+    document.getElementById("mapsLinkBtn").href = SITE.mapsLink;
+  };
+</script>
+</body>
+</html>

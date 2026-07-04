@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Srinivasa Tiles | Terracotta Products by Category</title>
+<meta name="description" content="Browse Srinivasa Tiles' terracotta products organised by category — Premium Roofing, Ceiling Tiles, Premium Jally, Ceiling Jally, Decorative Designs and Ridges.">
+<link rel="icon" href="assets/images/logo/logo-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal in">Gallery</div>
+    <h1 class="reveal in">See the <em>craftsmanship.</em></h1>
+    <p class="lede reveal in">Every design in one place, organised by category. Tap any photo to open the full gallery for that product.</p>
+  </div>
+</section>
+
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+    <div class="filter-row" id="galleryFilterRow"></div>
+    <div class="masonry" id="masonryWrap">
+      <div style="text-align:center; padding:80px 0; color:var(--stone);">Loading gallery…</div>
+    </div>
+  </div>
+</section>
+
+<script src="js/icons.js"></script>
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+<script>
+  window.onSiteReady = function() {
+    initGalleryPage();
+  };
+</script>
+</body>
+</html>
