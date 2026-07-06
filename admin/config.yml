@@ -1,0 +1,64 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded photos are stored in the repo, and how they're referenced in content
+media_folder: "assets/images/uploads"
+public_folder: "assets/images/uploads"
+
+site_url: https://sthindia.com
+display_url: https://sthindia.com
+logo_url: assets/images/logo/logo-icon.png
+
+locale: "en"
+
+collections:
+  - name: "products"
+    label: "Product Catalogue"
+    label_singular: "Catalogue"
+    files:
+      - name: "catalogue"
+        label: "All Products & Categories"
+        file: "data/products.json"
+        description: "Add or remove product photos here. Changes go live on the website automatically within a minute or two of saving."
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}} ({{fields.products}} products)"
+            fields:
+              - { label: "Category Name", name: "name", widget: "string" }
+              - { label: "URL Slug (no spaces, lowercase)", name: "slug", widget: "string" }
+              - { label: "Short Tagline", name: "tagline", widget: "string" }
+              - label: "Products"
+                name: "products"
+                widget: "list"
+                summary: "{{fields.name}} — {{fields.images}} photo(s)"
+                fields:
+                  - { label: "Product Name", name: "name", widget: "string" }
+                  - { label: "URL Slug (no spaces, lowercase)", name: "slug", widget: "string" }
+                  - { label: "Category Slug (must match category above)", name: "category", widget: "string" }
+                  - { label: "Category Display Name", name: "categoryName", widget: "string" }
+                  - { label: "Size (e.g. 8×8)", name: "size", widget: "string" }
+                  - { label: "Weight (e.g. 2.5 kg)", name: "weight", widget: "string" }
+                  - { label: "Coverage per Sq.Ft (e.g. 2.25 nos)", name: "per_sft", widget: "string" }
+                  - label: "Photos"
+                    name: "images"
+                    widget: "list"
+                    summary: "{{fields.image}}"
+                    field: { label: "Photo", name: "image", widget: "image" }
+
+  - name: "pages"
+    label: "Site Content"
+    files:
+      - name: "settings"
+        label: "Contact & Business Info"
+        file: "data/settings.json"
+        description: "Update phone numbers, email, address or WhatsApp number here."
+        fields:
+          - { label: "Phone Number 1", name: "phone1", widget: "string" }
+          - { label: "Phone Number 2", name: "phone2", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Full Address", name: "address", widget: "text" }
+          - { label: "Google Maps Link", name: "mapsLink", widget: "string" }
+          - { label: "WhatsApp Number (with country code, no + or spaces, e.g. 918951296369)", name: "whatsappNumber", widget: "string" }

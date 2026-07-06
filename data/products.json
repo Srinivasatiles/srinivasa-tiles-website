@@ -1,0 +1,540 @@
+{
+  "categories": [
+    {
+      "slug": "premium-roofing",
+      "name": "Premium Roofing",
+      "tagline": "Weather-tested terracotta roofs designed for Indian climates.",
+      "products": [
+        {
+          "slug": "premium-penta-roofing",
+          "name": "Premium Penta Roofing",
+          "size": "16\u00d710",
+          "weight": "3.1 kg",
+          "per_sft": "1.2 nos",
+          "category": "premium-roofing",
+          "categoryName": "Premium Roofing",
+          "images": [
+            "assets/images/products/premium-roofing/premium-penta-roofing/1.jpg",
+            "assets/images/products/premium-roofing/premium-penta-roofing/2.jpg",
+            "assets/images/products/premium-roofing/premium-penta-roofing/3.jpg",
+            "assets/images/products/premium-roofing/premium-penta-roofing/4.jpg",
+            "assets/images/products/premium-roofing/premium-penta-roofing/5.jpg",
+            "assets/images/products/premium-roofing/premium-penta-roofing/6.jpg",
+            "assets/images/products/premium-roofing/premium-penta-roofing/7.jpg"
+          ]
+        },
+        {
+          "slug": "premium-penta-glass-roofing",
+          "name": "Premium Penta Glass Roofing",
+          "size": "16\u00d710",
+          "weight": "3 kg",
+          "per_sft": "1.2 nos",
+          "category": "premium-roofing",
+          "categoryName": "Premium Roofing",
+          "images": [
+            "assets/images/products/premium-roofing/premium-penta-glass-roofing/1.jpg",
+            "assets/images/products/premium-roofing/premium-penta-glass-roofing/2.jpg",
+            "assets/images/products/premium-roofing/premium-penta-glass-roofing/3.jpg",
+            "assets/images/products/premium-roofing/premium-penta-glass-roofing/4.jpg",
+            "assets/images/products/premium-roofing/premium-penta-glass-roofing/5.jpg"
+          ]
+        },
+        {
+          "slug": "roman-roofing",
+          "name": "Roman Roofing",
+          "size": "16\u00d710",
+          "weight": "2.8 kg",
+          "per_sft": "1.2 nos",
+          "category": "premium-roofing",
+          "categoryName": "Premium Roofing",
+          "images": [
+            "assets/images/products/premium-roofing/roman-roofing/1.jpg",
+            "assets/images/products/premium-roofing/roman-roofing/2.jpg",
+            "assets/images/products/premium-roofing/roman-roofing/3.jpg",
+            "assets/images/products/premium-roofing/roman-roofing/4.jpg",
+            "assets/images/products/premium-roofing/roman-roofing/5.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ceiling-tiles",
+      "name": "Ceiling Tiles",
+      "tagline": "Decorative clay ceilings with traditional Indian motifs.",
+      "products": [
+        {
+          "slug": "ceiling-big-flower",
+          "name": "Ceiling Big Flower",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-big-flower/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-big-flower/2.jpg"
+          ]
+        },
+        {
+          "slug": "ceiling-mat",
+          "name": "Ceiling Mat",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-mat/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-mat/2.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-mat/3.jpg"
+          ]
+        },
+        {
+          "slug": "ceiling-new-flower",
+          "name": "Ceiling New Flower",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-new-flower/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-new-flower/2.jpg"
+          ]
+        },
+        {
+          "slug": "ceiling-sunflower",
+          "name": "Ceiling Sunflower",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-sunflower/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-sunflower/2.jpg"
+          ]
+        },
+        {
+          "slug": "ceiling-chain",
+          "name": "Ceiling Chain",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-chain/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-chain/2.jpg"
+          ]
+        },
+        {
+          "slug": "ceiling-pipe",
+          "name": "Ceiling Pipe",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-pipe/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-pipe/2.jpg"
+          ]
+        },
+        {
+          "slug": "ceiling-small-flower",
+          "name": "Ceiling Small Flower",
+          "size": "12\u00d78",
+          "weight": "1.85 kg",
+          "per_sft": "1.5 nos",
+          "category": "ceiling-tiles",
+          "categoryName": "Ceiling Tiles",
+          "images": [
+            "assets/images/products/ceiling-tiles/ceiling-small-flower/1.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-small-flower/2.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-small-flower/3.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-small-flower/4.jpg",
+            "assets/images/products/ceiling-tiles/ceiling-small-flower/5.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "premium-jally",
+      "name": "Premium Jally",
+      "tagline": "Breathable terracotta screens that filter light and air.",
+      "products": [
+        {
+          "slug": "opel-jally",
+          "name": "Opel Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/opel-jally/1.jpg",
+            "assets/images/products/premium-jally/opel-jally/2.jpg",
+            "assets/images/products/premium-jally/opel-jally/3.jpg",
+            "assets/images/products/premium-jally/opel-jally/4.jpg",
+            "assets/images/products/premium-jally/opel-jally/5.jpg",
+            "assets/images/products/premium-jally/opel-jally/6.jpg",
+            "assets/images/products/premium-jally/opel-jally/7.jpg",
+            "assets/images/products/premium-jally/opel-jally/8.jpg",
+            "assets/images/products/premium-jally/opel-jally/9.jpg"
+          ]
+        },
+        {
+          "slug": "amber-jally",
+          "name": "Amber Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/amber-jally/1.jpg",
+            "assets/images/products/premium-jally/amber-jally/2.jpg",
+            "assets/images/products/premium-jally/amber-jally/3.jpg",
+            "assets/images/products/premium-jally/amber-jally/4.jpg",
+            "assets/images/products/premium-jally/amber-jally/5.jpg",
+            "assets/images/products/premium-jally/amber-jally/6.jpg",
+            "assets/images/products/premium-jally/amber-jally/7.jpg"
+          ]
+        },
+        {
+          "slug": "petal-jally",
+          "name": "Petal Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/petal-jally/1.jpg",
+            "assets/images/products/premium-jally/petal-jally/2.jpg",
+            "assets/images/products/premium-jally/petal-jally/3.jpg",
+            "assets/images/products/premium-jally/petal-jally/4.jpg",
+            "assets/images/products/premium-jally/petal-jally/5.jpg",
+            "assets/images/products/premium-jally/petal-jally/6.jpg",
+            "assets/images/products/premium-jally/petal-jally/7.jpg",
+            "assets/images/products/premium-jally/petal-jally/8.jpg"
+          ]
+        },
+        {
+          "slug": "tv-jally",
+          "name": "TV Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/tv-jally/1.jpg",
+            "assets/images/products/premium-jally/tv-jally/2.jpg",
+            "assets/images/products/premium-jally/tv-jally/3.jpg",
+            "assets/images/products/premium-jally/tv-jally/4.jpg",
+            "assets/images/products/premium-jally/tv-jally/5.jpg"
+          ]
+        },
+        {
+          "slug": "zeebra-jally",
+          "name": "Zeebra Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/zeebra-jally/1.jpg",
+            "assets/images/products/premium-jally/zeebra-jally/2.jpg",
+            "assets/images/products/premium-jally/zeebra-jally/3.jpg",
+            "assets/images/products/premium-jally/zeebra-jally/4.jpg",
+            "assets/images/products/premium-jally/zeebra-jally/5.jpg",
+            "assets/images/products/premium-jally/zeebra-jally/6.jpg",
+            "assets/images/products/premium-jally/zeebra-jally/7.jpg"
+          ]
+        },
+        {
+          "slug": "zeebra-2-jally",
+          "name": "Zeebra 2 Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/zeebra-2-jally/1.jpg",
+            "assets/images/products/premium-jally/zeebra-2-jally/2.jpg",
+            "assets/images/products/premium-jally/zeebra-2-jally/3.jpg",
+            "assets/images/products/premium-jally/zeebra-2-jally/4.jpg",
+            "assets/images/products/premium-jally/zeebra-2-jally/5.jpg",
+            "assets/images/products/premium-jally/zeebra-2-jally/6.jpg"
+          ]
+        },
+        {
+          "slug": "arrow-jally",
+          "name": "Arrow Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/arrow-jally/1.jpg",
+            "assets/images/products/premium-jally/arrow-jally/2.jpg",
+            "assets/images/products/premium-jally/arrow-jally/3.jpg",
+            "assets/images/products/premium-jally/arrow-jally/4.jpg",
+            "assets/images/products/premium-jally/arrow-jally/5.jpg"
+          ]
+        },
+        {
+          "slug": "swastik-jally",
+          "name": "Swastik Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/swastik-jally/1.jpg",
+            "assets/images/products/premium-jally/swastik-jally/2.jpg",
+            "assets/images/products/premium-jally/swastik-jally/3.jpg",
+            "assets/images/products/premium-jally/swastik-jally/4.jpg"
+          ]
+        },
+        {
+          "slug": "camp-jally",
+          "name": "Camp Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/camp-jally/1.jpg",
+            "assets/images/products/premium-jally/camp-jally/2.jpg",
+            "assets/images/products/premium-jally/camp-jally/3.jpg",
+            "assets/images/products/premium-jally/camp-jally/4.jpg",
+            "assets/images/products/premium-jally/camp-jally/5.jpg",
+            "assets/images/products/premium-jally/camp-jally/6.jpg",
+            "assets/images/products/premium-jally/camp-jally/7.jpg",
+            "assets/images/products/premium-jally/camp-jally/8.jpg",
+            "assets/images/products/premium-jally/camp-jally/9.jpg"
+          ]
+        },
+        {
+          "slug": "slice-jally",
+          "name": "Slice Jally",
+          "size": "8\u00d78",
+          "weight": "2.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/slice-jally/1.jpg",
+            "assets/images/products/premium-jally/slice-jally/2.jpg",
+            "assets/images/products/premium-jally/slice-jally/3.jpg",
+            "assets/images/products/premium-jally/slice-jally/4.jpg",
+            "assets/images/products/premium-jally/slice-jally/5.jpg",
+            "assets/images/products/premium-jally/slice-jally/6.jpg",
+            "assets/images/products/premium-jally/slice-jally/7.jpg",
+            "assets/images/products/premium-jally/slice-jally/8.jpg",
+            "assets/images/products/premium-jally/slice-jally/9.jpg",
+            "assets/images/products/premium-jally/slice-jally/10.jpg",
+            "assets/images/products/premium-jally/slice-jally/11.jpg"
+          ]
+        },
+        {
+          "slug": "w-jally",
+          "name": "W Jally",
+          "size": "8\u00d712",
+          "weight": "3.2 kg",
+          "per_sft": "1.5 nos",
+          "category": "premium-jally",
+          "categoryName": "Premium Jally",
+          "images": [
+            "assets/images/products/premium-jally/w-jally/1.jpg",
+            "assets/images/products/premium-jally/w-jally/2.jpg",
+            "assets/images/products/premium-jally/w-jally/3.jpg",
+            "assets/images/products/premium-jally/w-jally/4.jpg",
+            "assets/images/products/premium-jally/w-jally/5.jpg",
+            "assets/images/products/premium-jally/w-jally/6.jpg",
+            "assets/images/products/premium-jally/w-jally/7.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ceiling-jally",
+      "name": "Ceiling Jally",
+      "tagline": "Patterned ceiling screens for ventilation and elegance.",
+      "products": [
+        {
+          "slug": "amber-ceiling-jally",
+          "name": "Amber Ceiling Jally",
+          "size": "8\u00d78",
+          "weight": "1.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "ceiling-jally",
+          "categoryName": "Ceiling Jally",
+          "images": [
+            "assets/images/products/ceiling-jally/amber-ceiling-jally/1.jpg",
+            "assets/images/products/ceiling-jally/amber-ceiling-jally/2.jpg",
+            "assets/images/products/ceiling-jally/amber-ceiling-jally/3.jpg"
+          ]
+        },
+        {
+          "slug": "petal-ceiling-jally",
+          "name": "Petal Ceiling Jally",
+          "size": "8\u00d78",
+          "weight": "1.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "ceiling-jally",
+          "categoryName": "Ceiling Jally",
+          "images": [
+            "assets/images/products/ceiling-jally/petal-ceiling-jally/1.jpg",
+            "assets/images/products/ceiling-jally/petal-ceiling-jally/2.jpg",
+            "assets/images/products/ceiling-jally/petal-ceiling-jally/3.jpg",
+            "assets/images/products/ceiling-jally/petal-ceiling-jally/4.jpg"
+          ]
+        },
+        {
+          "slug": "zeebra-2-ceiling-jally",
+          "name": "Zeebra 2 Ceiling Jally",
+          "size": "8\u00d78",
+          "weight": "1.5 kg",
+          "per_sft": "2.25 nos",
+          "category": "ceiling-jally",
+          "categoryName": "Ceiling Jally",
+          "images": [
+            "assets/images/products/ceiling-jally/zeebra-2-ceiling-jally/1.jpg",
+            "assets/images/products/ceiling-jally/zeebra-2-ceiling-jally/2.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "decorative-designs",
+      "name": "Decorative Designs",
+      "tagline": "Handcrafted accent tiles for facades and feature walls.",
+      "products": [
+        {
+          "slug": "vdr",
+          "name": "VDR",
+          "size": "9\u00d76",
+          "weight": "1 kg",
+          "per_sft": "2.7 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/vdr/1.jpg"
+          ]
+        },
+        {
+          "slug": "tvdr",
+          "name": "TVDR",
+          "size": "9\u00d76",
+          "weight": "1 kg",
+          "per_sft": "2.7 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/tvdr/1.jpg"
+          ]
+        },
+        {
+          "slug": "tpt",
+          "name": "TPT",
+          "size": "9\u00d76",
+          "weight": "1 kg",
+          "per_sft": "2.7 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/tpt/1.jpg"
+          ]
+        },
+        {
+          "slug": "tadr",
+          "name": "TDR",
+          "size": "9\u00d76",
+          "weight": "1 kg",
+          "per_sft": "2.7 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/tadr/1.jpg"
+          ]
+        },
+        {
+          "slug": "mbt",
+          "name": "MBT",
+          "size": "9\u00d76",
+          "weight": "1 kg",
+          "per_sft": "2.7 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/mbt/1.jpg"
+          ]
+        },
+        {
+          "slug": "jdt",
+          "name": "JDT",
+          "size": "9\u00d76",
+          "weight": "1 kg",
+          "per_sft": "2.7 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/jdt/1.jpg"
+          ]
+        },
+        {
+          "slug": "dpg",
+          "name": "DPG",
+          "size": "9\u00d78",
+          "weight": "1.8 kg",
+          "per_sft": "2 nos",
+          "category": "decorative-designs",
+          "categoryName": "Decorative Designs",
+          "images": [
+            "assets/images/products/decorative-designs/dpg/1.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ridges",
+      "name": "Ridges",
+      "tagline": "Finishing pieces that crown every terracotta roof.",
+      "products": [
+        {
+          "slug": "v-ridges",
+          "name": "'V' Ridges",
+          "size": "16\u00d710",
+          "weight": "3.1 kg",
+          "per_sft": "1 nos",
+          "category": "ridges",
+          "categoryName": "Ridges",
+          "images": [
+            "assets/images/products/ridges/v-ridges/1.jpg"
+          ]
+        },
+        {
+          "slug": "round-ridges",
+          "name": "Round Ridges",
+          "size": "12\u00d78",
+          "weight": "2 kg",
+          "per_sft": "1.5 nos",
+          "category": "ridges",
+          "categoryName": "Ridges",
+          "images": [
+            "assets/images/products/ridges/round-ridges/1.jpg"
+          ]
+        }
+      ]
+    }
+  ]
+}
