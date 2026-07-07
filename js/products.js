@@ -31,7 +31,7 @@ function productCardHTML(p) {
         ${imgTags}
       </div>
       ${multi ? `<div class="product-gallery-badge">${ICONS.layers}${imgs.length} photos</div>` : ""}
-      ${multi ? `<div class="product-gallery-hint">Scroll for more</div>` : ""}
+      ${multi ? `<div class="product-gallery-hint">${ICONS.arrow}Swipe for more</div>` : ""}
     </div>
     <div class="product-body">
       <div class="product-body-top">
