@@ -72,7 +72,7 @@ function renderNav() {
       <nav class="nav-links">${links}</nav>
       <div class="nav-actions">
         <a href="contact.html" class="btn btn-primary btn-sm desktop-only">Get a Quote</a>
-        <button class="nav-burger" aria-label="Open menu" id="burgerBtn">${ICONS.menu}</button>
+        <button type="button" class="nav-burger" aria-label="Open menu" id="burgerBtn">${ICONS.menu}</button>
       </div>
     </div>
     <div class="mobile-menu" id="mobileMenu">
@@ -80,7 +80,7 @@ function renderNav() {
         <a href="index.html" class="nav-brand">
           <img src="assets/images/logo/logo.png" alt="${SITE.name} logo">
         </a>
-        <button class="nav-burger" aria-label="Close menu" id="closeMenuBtn">${ICONS.close}</button>
+        <button type="button" class="nav-burger" aria-label="Close menu" id="closeMenuBtn">${ICONS.close}</button>
       </div>
       ${mobileLinks}
       <a href="contact.html" class="btn btn-primary btn-block">Get a Quote</a>
@@ -88,13 +88,22 @@ function renderNav() {
   `;
   document.body.prepend(nav);
 
-  document.getElementById("burgerBtn").addEventListener("click", () => {
-    document.getElementById("mobileMenu").classList.add("open");
-    document.body.style.overflow = "hidden";
-  });
-  document.getElementById("closeMenuBtn").addEventListener("click", () => {
-    document.getElementById("mobileMenu").classList.remove("open");
-    document.body.style.overflow = "";
+  // Event delegation on document.body (rather than binding directly to the buttons) so this
+  // keeps working even if the nav markup is ever re-rendered or timing shifts slightly.
+  document.body.addEventListener("click", (e) => {
+    if (e.target.closest("#burgerBtn")) {
+      document.getElementById("mobileMenu").classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+    if (e.target.closest("#closeMenuBtn")) {
+      document.getElementById("mobileMenu").classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    // Also close the menu automatically if someone taps a nav link inside it
+    if (e.target.closest("#mobileMenu a")) {
+      document.getElementById("mobileMenu").classList.remove("open");
+      document.body.style.overflow = "";
+    }
   });
 }
 
