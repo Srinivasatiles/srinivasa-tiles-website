@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Srinivasatiles/srinivasa-tiles-website
   branch: main
+  base_url: https://sthindia-admin-login.ea-e83.workers.dev
 
 # Where uploaded photos are stored in the repo, and how they're referenced in content
 media_folder: "assets/images/uploads"

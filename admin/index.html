@@ -9,22 +9,10 @@
     body { font-family: -apple-system, sans-serif; background:#FBF6EC; }
     #nc-root { min-height: 100vh; }
   </style>
-  <!-- Netlify Identity widget: lets you log in -->
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <div id="nc-root"></div>
   <!-- Decap CMS (free, open-source admin panel for static sites) -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    // Redirect to the site after login/logout so the widget works from any page
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-        }
-      });
-    }
-  </script>
 </body>
 </html>
