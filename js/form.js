@@ -1,7 +1,9 @@
 // Srinivasa Tiles — enquiry form handling
 // Uses Formspree (free tier) if configured; falls back to a mailto draft otherwise.
 
-const FORM_ENDPOINT = ""; // e.g. "https://formspree.io/f/xxxxxxx" — set this once you create a free Formspree account (see FORM-SETUP.txt)
+// Enquiries are delivered by Web3Forms (free) to the email tied to this access key.
+const FORM_ENDPOINT = "https://api.web3forms.com/submit";
+const WEB3FORMS_ACCESS_KEY = "6d28936b-d6ba-47f3-acd3-d4943eca525c";
 
 function initEnquiryForm() {
   const form = document.getElementById("enquiryForm");
@@ -26,10 +28,14 @@ function initEnquiryForm() {
 
     if (FORM_ENDPOINT) {
       try {
+        const fd = new FormData(form);
+        fd.append("access_key", WEB3FORMS_ACCESS_KEY);
+        fd.append("subject", `New website enquiry from ${name}`);
+        fd.append("from_name", "Srinivasa Tiles Website");
         const res = await fetch(FORM_ENDPOINT, {
           method: "POST",
           headers: { "Accept": "application/json" },
-          body: new FormData(form),
+          body: fd,
         });
         if (res.ok) {
           showSuccess();
