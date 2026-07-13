@@ -75,18 +75,26 @@ function renderNav() {
         <button type="button" class="nav-burger" aria-label="Open menu" id="burgerBtn">${ICONS.menu}</button>
       </div>
     </div>
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-top">
-        <a href="index.html" class="nav-brand">
-          <img src="assets/images/logo/logo.png" alt="${SITE.name} logo">
-        </a>
-        <button type="button" class="nav-burger" aria-label="Close menu" id="closeMenuBtn">${ICONS.close}</button>
-      </div>
-      ${mobileLinks}
-      <a href="contact.html" class="btn btn-primary btn-block">Get a Quote</a>
-    </div>
   `;
   document.body.prepend(nav);
+
+  // The mobile menu is appended directly to <body> (NOT inside the nav) on purpose:
+  // the nav uses backdrop-filter, which would otherwise trap this position:fixed
+  // overlay inside the nav bar's height and hide the menu links.
+  const mobileMenu = document.createElement("div");
+  mobileMenu.className = "mobile-menu";
+  mobileMenu.id = "mobileMenu";
+  mobileMenu.innerHTML = `
+    <div class="mobile-menu-top">
+      <a href="index.html" class="nav-brand">
+        <img src="assets/images/logo/logo.png" alt="${SITE.name} logo">
+      </a>
+      <button type="button" class="nav-burger" aria-label="Close menu" id="closeMenuBtn">${ICONS.close}</button>
+    </div>
+    ${mobileLinks}
+    <a href="contact.html" class="btn btn-primary btn-block">Get a Quote</a>
+  `;
+  document.body.appendChild(mobileMenu);
 
   // Event delegation on document.body (rather than binding directly to the buttons) so this
   // keeps working even if the nav markup is ever re-rendered or timing shifts slightly.
