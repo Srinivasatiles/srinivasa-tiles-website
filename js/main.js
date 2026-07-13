@@ -136,7 +136,7 @@ function renderFooter() {
             <a href="tel:${SITE.phone1_tel}">${SITE.phone1}</a>
             <a href="tel:${SITE.phone2_tel}">${SITE.phone2}</a>
             <a href="mailto:${SITE.email}">${SITE.email}</a>
-            <a href="${SITE.mapsLink}" target="_blank" rel="noopener">${SITE.address}</a>
+            <a href="${SITE.mapsLink}" target="_blank" rel="noopener" class="footer-address"><span class="footer-map-pin">${ICONS.pin}</span>${SITE.address}</a>
           </div>
         </div>
       </div>

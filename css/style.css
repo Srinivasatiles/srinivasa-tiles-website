@@ -919,6 +919,8 @@ textarea { resize: vertical; min-height: 110px; }
 .footer h5 { color: var(--cream); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18px; font-family: var(--font-body); font-weight: 800; }
 .footer-links a { display: block; padding: 7px 0; font-size: 14.5px; transition: color 0.2s; }
 .footer-links a:hover { color: var(--clay-bright); }
+.footer-map-pin { display: inline-flex; width: 15px; height: 15px; margin-right: 7px; vertical-align: -2px; }
+.footer-map-pin svg { width: 100%; height: 100%; fill: none; stroke: var(--clay-bright); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 26px; font-size: 13px; flex-wrap: wrap; gap: 12px; }
 .footer-bottom a { color: rgba(251,246,236,0.6); }
 
