@@ -63,7 +63,7 @@
       "products": [
         {
           "slug": "ceiling-big-flower",
-          "name": "Ceiling Small Flower",
+          "name": "Ceiling Big Flower",
           "size": "12\u00d78",
           "weight": "1.85 kg",
           "per_sft": "1.5 nos",
@@ -142,7 +142,7 @@
         },
         {
           "slug": "ceiling-small-flower",
-          "name": "Ceiling Big Flower",
+          "name": "Ceiling Small Flower",
           "size": "12\u00d78",
           "weight": "1.85 kg",
           "per_sft": "1.5 nos",
