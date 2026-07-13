@@ -7,6 +7,11 @@
 <meta name="description" content="Get in touch with Srinivasa Tiles for pricing, availability and project support. Call, WhatsApp, or send an enquiry — we typically respond within one business day.">
 <link rel="icon" href="assets/images/logo/logo-icon.png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  #addressText { display: block; }
+  #mapsLinkBtn:hover { text-decoration: underline !important; color: var(--clay-bright) !important; }
+  #ciMapIcon svg { width: 100%; height: 100%; fill: none; stroke: var(--clay-bright); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+</style>
 </head>
 <body>
 
@@ -44,9 +49,9 @@
             <span class="icon-badge" id="ciPin"></span>
             <div class="txt">
               <span>Address</span>
-              <p id="addressText">Bennikal Road, Sanamavu Village, Rayakottai Road, Hosur - 635119, Krishnagiri Dist, Tamil Nadu</p>
-              <a href="https://maps.app.goo.gl/GCZ3m3GYtuJSuc8F8" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" style="margin-top:12px;" id="mapsLinkBtn">
-                <span id="ciMapIcon" style="display:inline-flex; width:16px; height:16px;"></span> View on Google Maps
+              <a id="addressText" href="https://maps.app.goo.gl/GCZ3m3GYtuJSuc8F8" target="_blank" rel="noopener">Bennikal Road, Sanamavu Village, Rayakottai Road, Hosur - 635119, Krishnagiri Dist, Tamil Nadu</a>
+              <a href="https://maps.app.goo.gl/GCZ3m3GYtuJSuc8F8" target="_blank" rel="noopener" id="mapsLinkBtn" style="display:inline-flex; align-items:center; gap:7px; margin-top:10px; color:var(--clay-deep); font-weight:800; font-size:14px; text-decoration:none;">
+                <span id="ciMapIcon" style="display:inline-flex; width:18px; height:18px;"></span> View on Google Maps
               </a>
             </div>
           </div>
@@ -57,10 +62,6 @@
               <a href="#" id="waContactLink" target="_blank" rel="noopener">Chat with us instantly</a>
             </div>
           </div>
-        </div>
-
-        <div class="map-frame reveal">
-          <iframe src="https://www.google.com/maps?q=Bennikal%20Road%2C%20Sanamavu%20Village%2C%20Hosur%20635119&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Srinivasa Tiles factory location"></iframe>
         </div>
       </div>
 
@@ -124,7 +125,9 @@
     document.getElementById("phoneLink2").href = "tel:" + SITE.phone2_tel;
     document.getElementById("emailLink").textContent = SITE.email;
     document.getElementById("emailLink").href = "mailto:" + SITE.email;
-    document.getElementById("addressText").textContent = SITE.address;
+    var addrLink = document.getElementById("addressText");
+    addrLink.textContent = SITE.address;
+    addrLink.href = SITE.mapsLink;
     document.getElementById("mapsLinkBtn").href = SITE.mapsLink;
   };
 </script>
