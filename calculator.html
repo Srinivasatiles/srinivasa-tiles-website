@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quote Calculator — Srinivasa Tiles | SFT, Pieces &amp; Tonnage Estimator</title>
+<meta name="description" content="Estimate your terracotta order in seconds. Pick a category, design and grade, enter either square feet or number of pieces, and instantly see the matching quantity and tonnage.">
+<link rel="icon" href="assets/images/logo/logo-icon.png">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ---- Quote Calculator page ---- */
+  .calc-shell { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: flex-start; }
+  @media (max-width: 900px) { .calc-shell { grid-template-columns: 1fr; gap: 28px; } }
+
+  .calc-inputs-or {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: end;
+  }
+  .calc-or-divider {
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--stone);
+    padding-bottom: 14px;
+  }
+  @media (max-width: 560px) {
+    .calc-inputs-or { grid-template-columns: 1fr; gap: 10px; }
+    .calc-or-divider { padding: 4px 0; }
+  }
+
+  .calc-input-help { margin-top: 8px; font-size: 12.5px; color: var(--stone); }
+  select:disabled, input:disabled { opacity: 0.55; cursor: not-allowed; background: var(--cream-deep); }
+
+  /* Result panel */
+  .calc-result {
+    position: relative;
+    border-radius: var(--radius-lg);
+    padding: 34px;
+    color: var(--cream);
+    background: linear-gradient(155deg, var(--clay-bright) 0%, var(--clay-deep) 58%, var(--clay-ember) 100%);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  @media (min-width: 901px) { .calc-result { position: sticky; top: 96px; } }
+  .calc-result h3 { color: #fff; font-size: 20px; }
+  .calc-result-sub { margin-top: 6px; font-size: 13.5px; color: rgba(255,255,255,0.78); }
+
+  .calc-empty { padding: 18px 0 4px; font-size: 14.5px; color: rgba(255,255,255,0.82); line-height: 1.6; }
+
+  .calc-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+  .calc-stat {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+  }
+  .calc-stat.full { grid-column: 1 / -1; }
+  .calc-stat span { display: block; font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.72); font-weight: 800; }
+  .calc-stat strong { display: block; margin-top: 6px; font-family: var(--font-display); font-size: 26px; line-height: 1.1; color: #fff; }
+  .calc-stat small { font-size: 13px; font-weight: 600; opacity: 0.82; margin-left: 4px; }
+
+  /* Selection summary chips */
+  .calc-selection { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .calc-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: var(--radius-pill);
+    padding: 6px 13px; font-size: 12.5px; font-weight: 700; color: #fff;
+  }
+  .calc-chip b { font-weight: 800; opacity: 0.7; text-transform: uppercase; font-size: 10px; letter-spacing: 0.06em; }
+
+  .calc-result .btn-on-dark { margin-top: 24px; }
+  .calc-hidden { display: none !important; }
+
+  /* Summary table (final output) */
+  .calc-table-wrap { margin-top: 30px; overflow-x: auto; }
+  .calc-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  .calc-table th {
+    text-align: left; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase;
+    color: var(--stone); font-weight: 800; padding: 0 14px 12px; border-bottom: 2px solid var(--cream-line);
+  }
+  .calc-table td { padding: 16px 14px; border-bottom: 1px solid var(--cream-line); color: var(--ink); vertical-align: top; }
+  .calc-table td strong { color: var(--clay-deep); font-family: var(--font-display); font-size: 16px; }
+  .calc-table tr:last-child td { border-bottom: none; }
+</style>
+</head>
+<body>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal in">Estimate in Seconds</div>
+    <h1 class="reveal in">Quote <em>calculator.</em></h1>
+    <p class="lede reveal in">Choose your category, design and grade, then enter either square feet or the number of pieces — we'll instantly work out the matching quantity and the total tonnage for your order.</p>
+  </div>
+</section>
+
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+    <div class="calc-shell">
+
+      <!-- Inputs -->
+      <div class="reveal">
+        <div class="form-card">
+          <h3 style="font-size:22px;">Your requirement</h3>
+          <p style="margin-top:8px; color:var(--stone); font-size:14px;">Fields marked with <span style="color:var(--clay-bright); font-weight:800;">*</span> are required.</p>
+
+          <form id="calcForm" style="margin-top:26px;" autocomplete="off">
+            <div class="form-row">
+              <label for="calcCategory">Category <span style="color:var(--clay-bright);">*</span></label>
+              <select id="calcCategory" required>
+                <option value="">Select a category…</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="calcDesign">Design <span style="color:var(--clay-bright);">*</span></label>
+              <select id="calcDesign" required disabled>
+                <option value="">Select a category first</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="calcGrade">Grade <span style="color:var(--clay-bright);">*</span></label>
+              <select id="calcGrade" required disabled>
+                <option value="">Select a design first</option>
+              </select>
+            </div>
+
+            <div class="form-row" style="margin-bottom:10px;">
+              <label>Quantity <span style="color:var(--clay-bright);">*</span> <span style="text-transform:none; font-weight:600; color:var(--stone); letter-spacing:0;">— enter one, we fill the other</span></label>
+            </div>
+
+            <div class="calc-inputs-or">
+              <div>
+                <label for="calcSft" style="margin-bottom:7px;">SFT (Square Feet)</label>
+                <input type="number" id="calcSft" inputmode="decimal" min="0" step="any" placeholder="e.g. 1000" disabled>
+              </div>
+              <div class="calc-or-divider">or</div>
+              <div>
+                <label for="calcNos" style="margin-bottom:7px;">No's (Pieces)</label>
+                <input type="number" id="calcNos" inputmode="numeric" min="0" step="any" placeholder="e.g. 1200" disabled>
+              </div>
+            </div>
+            <p class="calc-input-help" id="calcCoverageNote"></p>
+
+            <button type="button" class="btn btn-ghost btn-block" id="calcResetBtn" style="margin-top:24px;">Reset</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div class="reveal">
+        <div class="calc-result">
+          <div class="lattice-bg" style="color:#fff; opacity:0.08;"></div>
+          <div style="position:relative; z-index:1;">
+            <h3>Your estimate</h3>
+            <p class="calc-result-sub">Live quantity &amp; tonnage based on your selection.</p>
+
+            <div class="calc-empty" id="calcEmpty">
+              Select a category, design and grade, then enter your square feet or number of pieces to see the estimate here.
+            </div>
+
+            <div id="calcOutput" class="calc-hidden">
+              <div class="calc-selection" id="calcSelection"></div>
+              <div class="calc-stats">
+                <div class="calc-stat">
+                  <span>Square Feet</span>
+                  <strong id="calcOutSft">—</strong>
+                </div>
+                <div class="calc-stat">
+                  <span>Pieces (No's)</span>
+                  <strong id="calcOutNos">—</strong>
+                </div>
+                <div class="calc-stat full">
+                  <span>Total Weight / Tonnage</span>
+                  <strong id="calcOutTonnage">—</strong>
+                </div>
+              </div>
+              <a href="#" class="btn btn-on-dark btn-block" id="calcWhatsappBtn" target="_blank" rel="noopener">Send this estimate on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Final output summary table -->
+    <div class="reveal calc-hidden" id="calcSummaryBlock" style="margin-top:20px;">
+      <div class="form-card" style="padding:30px;">
+        <h3 style="font-size:20px;">Estimate summary</h3>
+        <div class="calc-table-wrap">
+          <table class="calc-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Design</th>
+                <th>Grade</th>
+                <th>SFT</th>
+                <th>No's</th>
+                <th>Weight / Tonnage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="calcSummaryRow">
+                <td id="sumCategory">—</td>
+                <td id="sumDesign">—</td>
+                <td id="sumGrade">—</td>
+                <td id="sumSft">—</td>
+                <td id="sumNos">—</td>
+                <td id="sumWeight">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="form-note" style="text-align:left;">This is an approximate estimate for planning. For a firm quote including current pricing and availability, please <a href="contact.html" style="color:var(--clay-deep); font-weight:700;">contact us</a>.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/icons.js"></script>
+<script src="js/main.js"></script>
+<script src="js/products.js"></script>
+<script src="js/calculator.js"></script>
+<script>
+  window.onSiteReady = function() {
+    initCalculatorPage();
+  };
+</script>
+</body>
+</html>

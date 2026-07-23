@@ -4,6 +4,7 @@
       "slug": "premium-roofing",
       "name": "Premium Roofing",
       "tagline": "Weather-tested terracotta roofs designed for Indian climates.",
+      "grades": ["1st Class", "2nd Class", "2A", "OB"],
       "products": [
         {
           "slug": "premium-penta-roofing",
@@ -60,6 +61,7 @@
       "slug": "ceiling-tiles",
       "name": "Ceiling Tiles",
       "tagline": "Decorative clay ceilings with traditional Indian motifs.",
+      "grades": ["1st Class", "2nd Class", "2A", "OB"],
       "products": [
         {
           "slug": "ceiling-big-flower",
@@ -162,6 +164,7 @@
       "slug": "premium-jally",
       "name": "Premium Jally",
       "tagline": "Breathable terracotta screens that filter light and air.",
+      "grades": ["1st Class", "2nd Class", "2A", "OB"],
       "products": [
         {
           "slug": "opel-jally",
@@ -368,6 +371,7 @@
       "slug": "ceiling-jally",
       "name": "Ceiling Jally",
       "tagline": "Patterned ceiling screens for ventilation and elegance.",
+      "grades": ["1st Class", "2nd Class", "2A"],
       "products": [
         {
           "slug": "amber-ceiling-jally",
@@ -417,6 +421,7 @@
       "slug": "decorative-designs",
       "name": "Decorative Designs",
       "tagline": "Handcrafted accent tiles for facades and feature walls.",
+      "grades": ["1st Class", "2nd Class", "4th Class"],
       "products": [
         {
           "slug": "vdr",
@@ -508,6 +513,7 @@
       "slug": "ridges",
       "name": "Ridges",
       "tagline": "Finishing pieces that crown every terracotta roof.",
+      "grades": ["1st Class", "2nd Class"],
       "products": [
         {
           "slug": "v-ridges",

@@ -43,6 +43,7 @@ const NAV_ITEMS = [
   { href: "about.html", label: "About Us" },
   { href: "products.html", label: "Products" },
   { href: "gallery.html", label: "Gallery" },
+  { href: "calculator.html", label: "Calculator" },
   { href: "contact.html", label: "Contact Us" },
 ];
 
@@ -135,6 +136,7 @@ function renderFooter() {
             <a href="about.html">About Us</a>
             <a href="products.html">Products</a>
             <a href="gallery.html">Gallery</a>
+            <a href="calculator.html">Quote Calculator</a>
             <a href="contact.html">Contact Us</a>
           </div>
         </div>
